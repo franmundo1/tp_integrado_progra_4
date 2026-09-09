@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiblioTech</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+       <h1 id="headerH1">BiblioTech</h1>
+       <p>gestion y desarrollo de libros</p>
+    </header>
+    <main>
+        <section id="agreLibro">
+            <h2>Agregar libro</h2>
+
+            <form id="form-libro">
+             <label for="titulo">Titulo</label>
+             <input type="text" id="titulo" name="titulo" required>
+
+             <label for="autor">Autor</label>
+             <input type="text" id="autor" name="autor" required>
+
+             <label for="genero">Genero</label>
+            <select name="genero" id="genero" required>
+              <option value="">Seleccionar genero</option>
+              <option value="ficcion">Ficcion</option>
+              <option value="historia">Historia</option>
+              <option value="ciencia">Ciencia</option>
+              <option value="fantasia">Fantasia</option>
+            </select>
+             <label for="anio">Año</label>
+             <input type="number" name="anio" id="anio" min="0" max="2026" required>
+
+             <button type="submit"> Agregar </button>
+
+            </form>
+        </section>
+
+        <section id="filtros">
+          <h2>Filtros</h2>
+
+            <label for="busqueda">Buscar</label>
+            <input type="text" placeholder="Titulo o Autor" id="busqueda">
+
+            <label for="filtro-genero">Genero</label>
+           <select  id="filtro-genero">
+            <option value="todos">Todos</option>
+            <option value="ficcion">Ficción</option>
+            <option value="historia">Historia</option>
+            <option value="ciencia">Ciencia</option>
+            <option value="fantasia">Fantasía</option>
+           </select>
+            <label for="solo-favoritos">
+              <input type="checkbox"  id="solo-favoritos">
+              Mostrar solo favoritos
+            </label>
+
+        </section>
+
+        <section id="catalogo">
+            <h2>Catalogo</h2>
+
+            <div id="listado-libros"></div>
+
+            <p id="contador" >Mostrando 0 de 0 libros</p>
+
+        </section>
+
+    </main>
+    <footer>
+       <p>BiblioTech - Trabajo Práctico Integrador</p>
+       <p>Desarrollado por Francisco Mandolino</p>
+    </footer>
+</body>
+</html>
