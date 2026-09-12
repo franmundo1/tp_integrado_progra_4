@@ -72,6 +72,7 @@ main{
     display: flex;
     flex-wrap: wrap ;
     gap: 15px;
+    align-items: stretch;
 }
 #form-libro{
     display: flex;
@@ -97,6 +98,89 @@ label{
 #agreLibro h2 {
  border-bottom: 1px solid black;
  padding-bottom: 13px;
+}
+
+.tarjeta-libro{
+    box-sizing: border-box;
+    flex: 1 1 230px;
+    max-width: 320px;
+    padding: 18px;
+    border: 1px solid #8b6b61;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 3px 8px #0003;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    position: relative;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.tarjeta-libro h3 {
+    margin: 0;
+    padding-right: 25px;
+    color: brown;
+}
+
+.tarjeta-libro p {
+    color: black;
+    margin: 0;
+}
+.tarjeta-libro button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #8b6b61;
+    border-radius: 5px;
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+}
+
+.tarjeta-libro .btn-favorito {
+    margin-top: auto;
+}
+
+.tarjeta-libro .btn-eliminar {
+    background-color: #8f2f2f;
+}
+.tarjeta-libro:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px #0004;
+}
+
+.tarjeta-libro button:hover {
+    filter: brightness(1.2);
+}
+
+.tarjeta-libro button:focus {
+    outline: 3px solid #d8b26e;
+}
+.tarjeta-libro.prestado {
+    opacity: 0.6;
+    background-color: #eeeeee;
+}
+
+.tarjeta-libro.favorito {
+    border: 2px solid #d39b2a;
+}
+
+.tarjeta-libro.favorito::before {
+    content: "★";
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    color: #d39b2a;
+    font-size: 22px;
+}
+.estado {
+    color: green;
+    font-weight: bold;
+}
+
+.tarjeta-libro.prestado .estado {
+    color: red;
+    text-decoration: line-through;
 }
 
 
